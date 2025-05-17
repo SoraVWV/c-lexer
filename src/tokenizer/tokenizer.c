@@ -581,6 +581,15 @@ TokenizerContext *tokenizer_init(const char *filename) {
     return context;
 }
 
+void tokenizer_free(TokenizerContext *tokenizer) {
+    if (!tokenizer) {
+        return;
+    }
+
+    free(tokenizer->content);
+    free(tokenizer);
+}
+
 const char* token_type_to_string(const TokenType type) {
     switch (type) {
         case LEFT_PARENT: return "LEFT_PARENT";

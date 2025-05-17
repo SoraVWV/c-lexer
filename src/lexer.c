@@ -4,8 +4,6 @@
 
 #include "tokenizer/tokenizer.h"
 
-extern TokenizerError error; // from "tokenizer/tokenizer.c"
-
 typedef struct {
     char *input_file;
     char *output_file;

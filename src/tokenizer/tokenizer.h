@@ -160,7 +160,11 @@ typedef struct {
     TokenizerFrame frame;
 } TokenizerError;
 
+extern TokenizerError error;
+
 TokenizerContext *tokenizer_init(const char *filename);
+
+void tokenizer_free(TokenizerContext *tokenizer);
 
 Token *tokenizer_next(TokenizerContext *context);
 
